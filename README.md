@@ -2,7 +2,7 @@
 
 A simple, beautiful web app that calculates your exact age in years, months, and days.
 
-- Live Demo: [Age Calculator Live Demo]()
+- Live Demo: [Age Calculator Live Demo](https://hameed-codes.github.io/Modern-Age-Calculator/)
 
 ---
 
@@ -49,7 +49,7 @@ A simple, beautiful web app that calculates your exact age in years, months, and
 
 **Hameed Khan** - Aspiring web developer learning and building cool stuff.
 
-[GitHub](https://github.com/hameed-codes) | [LinkedIn](https://linkedin.com/in/yourprofile)
+[GitHub](https://github.com/hameed-codes) | [LinkedIn]([www.linkedin.com/in/hameed-khan-86157339a](https://www.linkedin.com/in/hameed-khan-86157339a))
 
 ---
 

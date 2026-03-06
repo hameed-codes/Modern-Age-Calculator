@@ -6,6 +6,7 @@
     user-select: none;
 }
 
+/* Body styling with a vibrant gradient background */
 body {
     min-height: 100vh;
     width: 100%;
@@ -17,6 +18,7 @@ body {
     padding: 1rem;
 }
 
+/* Main container for the age calculator */
 .age-cal {
     width: 100%;
     max-width: 500px;
@@ -42,6 +44,7 @@ h1 {
     text-align: center;
 }
 
+/* Gradient text effect for the "Calculator" part of the heading */
 h1 span {
     background: linear-gradient(270deg, rgb(253, 11, 201) 15%, rgba(0, 212, 255, 1) 100%);
     -webkit-background-clip: text;
@@ -77,6 +80,7 @@ input:hover, input:focus {
     outline: none;
 }
 
+/* Style for the calculate button */
 button {
     width: 100%;
     height: clamp(2.75rem, 8vw, 3.5rem);
@@ -101,6 +105,7 @@ button:active {
     transform: scale(0.98);
 }
 
+/* Container for the result display */
 .result {
     width: 100%;
     display: flex;
@@ -154,7 +159,7 @@ button:active {
     text-align: center;
 }
 
-/* Tablet adjustments */
+/* Responsive adjustments*/
 @media (max-width: 768px) {
     .age-cal {
         border-radius: 16px;
@@ -165,7 +170,6 @@ button:active {
     }
 }
 
-/* Mobile adjustments */
 @media (max-width: 480px) {
     body {
         padding: 0.75rem;
@@ -196,7 +200,6 @@ button:active {
     }
 }
 
-/* Large desktop enhancement */
 @media (min-width: 1200px) {
     .age-cal {
         max-width: 550px;

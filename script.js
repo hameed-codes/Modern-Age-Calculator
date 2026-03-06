@@ -5,6 +5,8 @@ const resultMonth = document.querySelector("#months");
 const resultYear = document.querySelector("#years");
 const resultDay = document.querySelector("#days");
 
+
+//Main function to calculate age
 function calculateAge() {
     if (!birthdate.value) {
         birthdate.style.borderColor = "rgba(255, 0, 0, 0.5)";
@@ -17,6 +19,7 @@ function calculateAge() {
     const today = new Date();
     const birthdateObj = new Date(birthdate.value);
     
+    // Check if the selected date is in the future
     if (birthdateObj > today) {
         alert("Please select a date in the past!");
         return;
@@ -37,6 +40,7 @@ function calculateAge() {
         month += 12;
     }
 
+    // Animate the results
     animateValue(resultYear, parseInt(resultYear.innerText) || 0, year, 500);
     animateValue(resultMonth, parseInt(resultMonth.innerText) || 0, month, 500);
     animateValue(resultDay, parseInt(resultDay.innerText) || 0, day, 500);

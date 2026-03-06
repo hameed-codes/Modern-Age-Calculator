@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: #c4009a;
+    background: linear-gradient(130deg, rgba(196, 0, 154, 1) 16%, rgba(73, 73, 163, 1) 51%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.age-cal {
+    width: 100%;
+    max-width: 500px;
+    min-width: 280px;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    margin-bottom: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+}
+
+h1 span {
+    background: linear-gradient(270deg, rgb(253, 11, 201) 15%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bolder;
+}
+
+h1 + p {
+    color: rgb(187, 187, 187);
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-weight: 500;
+    align-self: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+input {
+    width: 100%;
+    height: clamp(2.75rem, 8vw, 3.5rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input:hover, input:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    height: clamp(2.75rem, 8vw, 3.5rem);
+    border-radius: 8px;
+    border: none;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(60deg, rgba(73, 73, 163, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+    flex-wrap: wrap;
+}
+
+
+.result-box {
+    flex: 1;
+    min-width: 80px;
+    max-width: 120px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.result-box p:nth-child(2) {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    color: rgb(196, 196, 196);
+    margin-top: 0.25rem;
+}
+
+#months, #years, #days {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: bold;
+    color: rgb(0, 212, 255);
+    text-align: center;
+}
+
+.credit {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+    .age-cal {
+        border-radius: 16px;
+    }
+    
+    .result-box {
+        min-width: 70px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 0.75rem;
+    }
+    
+    .age-cal {
+        border-radius: 12px;
+        padding: 1.25rem;
+    }
+    
+    .result {
+        gap: 0.5rem;
+        display: block;
+    }
+    
+    .result-box {
+        min-width: 100%;
+        max-width: none;
+        aspect-ratio: 3 / 1;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem;
+        border-radius: 8px;
+    }
+
+    #months, #years, #days {
+        font-size: 3.5rem;
+    }
+}
+
+/* Large desktop enhancement */
+@media (min-width: 1200px) {
+    .age-cal {
+        max-width: 550px;
+        padding: 3.5rem;
+    }
+}
+
+/* Dark mode for calendar (date selection calendar)*/
+@media (prefers-color-scheme: dark) {
+    input {
+        color-scheme: dark;
+    }
+}
